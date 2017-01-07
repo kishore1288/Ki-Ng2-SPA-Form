@@ -12,7 +12,11 @@ import appRoutes from './routes';
 
 // used to map object of imports into array so we can use
 // the spread operator in the ngModule definition
-const arr = obj => Object.keys(obj).map(name => obj[name]);
+// const arr = obj => Object.keys(obj).map(name => obj[name]);
+
+/*export function arr(obj: obj) {
+    return Object.keys(obj).map(name => obj[name]);
+}*/
 
 @NgModule({
     imports: [
@@ -23,10 +27,10 @@ const arr = obj => Object.keys(obj).map(name => obj[name]);
 
      ],
     declarations: [
-        ...arr(HOME),
-
-        ...arr(FORMS),
-
+        // ...arr(HOME),
+        HOME.HomeComponent,
+        // ...arr(FORMS),
+        FORMS.ValidationComponent
 
     ],
 
@@ -34,8 +38,11 @@ const arr = obj => Object.keys(obj).map(name => obj[name]);
         RouterModule,
         // SelectModule,
 
-        ...arr(HOME),
-        ...arr(FORMS),
+        // ...arr(HOME),
+        // ...arr(FORMS),
+
+        HOME.HomeComponent,
+        FORMS.ValidationComponent
 
     ]
 })

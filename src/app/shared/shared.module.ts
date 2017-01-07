@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateService, TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
-import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { Ng2BootstrapModule } from 'ng2-bootstrap';
 import { ToasterModule } from 'angular2-toaster/angular2-toaster';
 
 
@@ -35,7 +35,7 @@ export function createTranslateLoader(http: Http) {
         ColorsService
     ],
     declarations: [
-        
+
     ],
     exports: [
         CommonModule,
@@ -46,7 +46,7 @@ export function createTranslateLoader(http: Http) {
         RouterModule,
         Ng2BootstrapModule,
         ToasterModule,
-        
+
     ]
 })
 export class SharedModule { }

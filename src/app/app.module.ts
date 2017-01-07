@@ -12,19 +12,23 @@ import { RoutesModule } from './routes/routes.module';
 
 @NgModule({
   declarations: [
-    CoreModule,
+    // CoreModule,
     AppComponent,
-    LayoutModule,
-    SharedModule,
-    RoutesModule
+    // LayoutModule,
+    // SharedModule,
+    // RoutesModule
   ],
   imports: [
+    CoreModule,
+    LayoutModule,
+    SharedModule,
+    RoutesModule,
     BrowserModule,
     FormsModule,
     HttpModule
-
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
